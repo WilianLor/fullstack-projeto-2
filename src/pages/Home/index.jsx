@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useHomeContext } from "../../hooks/useHomeContext";
 import { Domain } from "../components/Domain";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import {
   Button,
   Field,
@@ -9,7 +9,6 @@ import {
   InfoAside,
   Label,
   Page,
-  ErrorMessage,
   PageContainer,
   ResultContainer,
   SearchContainer,
@@ -67,7 +66,6 @@ const Home = () => {
             </Form>
           </SearchContainer>
         </InfoAside>
-        <ToastContainer/>
         <ResultContainer>
           {domains.map((domain) => (
             <Domain domain={domain} />
