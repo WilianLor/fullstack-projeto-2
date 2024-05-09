@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useHomeContext } from "../../hooks/useHomeContext";
 import { Domain } from "../components/Domain";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import {
   Button,
   Field,
@@ -32,7 +32,7 @@ const Home = () => {
     await searchDomain(domain);
     reset();
     } catch {
-      notify("Domínio não pode estar vazio!")
+      notify("Campo de domínio é obrigatório")
     }
   };
 
